@@ -1,0 +1,137 @@
+<!-- 
+    Student: JingYi Li
+    File name: places.html
+    Date of creating: Sep 12 2023
+    Description: This is page 2 which is used to submit user's information and set a link to connect with Page 1.
+-->
+
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <meta charset="UTF-8" />
+    <meta name=" author " content=" JingYi Li " />
+    <meta name=" description " content=" Demo for lecture 3 " />
+    <meta name=" keywords " content=" form,get,post" />
+    <title>places</title>
+</head>
+<body>
+    <p>This is Page 2, Click <a href="hometown.html">here</a> to go to Page 1.</p>
+    <h1>Share your information about my hometown</h1>
+
+    <form action="process.php" method="post" enctype="text/plain">
+    <fieldset>
+        <legend>1. User Info</legend><br />
+
+        <table style="text-align: left;">
+            <tr>
+                <td>First name</td>
+                <td>Second name</td>
+            </tr>
+
+            <tr>
+                <td><input type="text" id="firstname" name="userinfo" value="JingYi" readonly/></td>
+
+                <td><input type="text" id="lastname" name="userinfo" maxlength="10" /></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Email</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="email" id="email" name="userinfo" placeholder="fomat for email is XXX@yyy.zzz" size="50"/>
+                </td>
+            </tr>
+
+        </table>
+
+    </fieldset><br />
+    <fieldset>
+        <legend>2. Location</legend><br />
+
+        <table style="text-align: left;">
+            <tr>
+                <td>Address</td>
+            </tr>
+            <tr>
+                <td colspan="3"><input type="text" id="address" name="location" size="50"></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>State</td>
+                <td>Zip</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="city" name="location" size="16"></td>
+                <td><input type="text" id="state" name="location" size="6"></td>
+                <td><input type="text" id="zip" name="location" size="13"></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td colspan="2">Country</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="phone" name="location" placeholder="NNN-NNN-NNNN"></td>
+                <td colspan="2">
+                    <input list="count" id="country" name="location" value="Canada">
+                    <datalist id="count">
+                    <option value="Canada"></option>
+                    <option value="USA"></option>
+                    <option value="Cameron"></option>
+                    <option value="England"></option>
+                    <option value="Germany"></option>
+                    <option value="AUE"></option>
+                    <option value="China"></option>
+                    <option value="Taiwan"></option>
+                    <option value="Indea"></option>
+                    <option value="Italy"></option>
+                    <option value="Russia"></option>
+                    <option value="UK"></option>
+                    </datalist>
+                </td>
+            </tr>
+        </table><br />
+
+        <label>Continent</label>
+
+        <br /><br />
+        <input type="radio" id="northamerica" name="continent" value="northamerica" />
+        <label for="northamerica">North America</label><br />
+
+        <input type="radio" id="europe" name="continent" value="europe" />
+        <label for="europe">Europe</label><br />
+
+        <input type="radio" id="southamerica" name="continent" value="southamerica" />
+        <label for="southamerica">South America</label><br />
+
+        <input type="radio" id="asia" name="continent" value="asia" />
+        <label for="asia">Asia</label><br /><br />
+    </fieldset><br />
+
+    <fieldset>
+        <legend>3. Favorite Place</legend><br />
+
+        <label for="favoriteplace">Favorite Place</label>
+        <input type="text" id="favoriteplace" name="favoriteplace"><br /><br />
+
+        <label for="whydoyoulovethisplace">Why do you love this Place?</label><br />
+        <textarea id="whydoyoulovethisplace" name="favoriteplace" rows="8" cols="50"></textarea><br /><br />
+    </fieldset>
+
+    <br />
+    <input type="submit" value="Send">
+    <input type="reset" value="Clear information">
+    </form>
+    <footer>
+        <div>
+        <p>
+        JingYi, Sep 13 2023 Copyright
+        </p>
+        </div>  
+    </footer>
+</body>
+
+</html>
+
+
